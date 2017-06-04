@@ -3,7 +3,7 @@ import itemReducer from './item';
 import shoppingCartReducer from './shoppingCart';
 
 const rootReducer = combineReducers({
-    item: itemReducer,
+    items: itemReducer,
     shoppingCart: shoppingCartReducer
 });
 
