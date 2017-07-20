@@ -1,4 +1,5 @@
 import { server_secret } from '../secrets';
+import {browserHistory} from 'react-router';
 
 export const ADD_LOCATION = 'ADD_LOCATION';
 export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
@@ -24,11 +25,13 @@ export const fetchProducts = name => {
             method: 'GET',
             headers
         }).then((data) => data.json())
-        .then((data) => console.log(data));
+        .then(({prices}) => {
+            dispatch({
+                type: FETCH_PRODUCTS,
+                payload: prices     
+            });
 
-        return {
-            type: FETCH_PRODUCTS,
-            payload: name
-        }
+            browserHistory.push(`/products/${name}`);
+        });
     }
 }

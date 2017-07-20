@@ -1,0 +1,10 @@
+.location {
+    display: flex;
+    justify-content: space-around;
+}
+
+.location .name {
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+}
