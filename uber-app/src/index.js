@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore , applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import registerServiceWorker from './registerServiceWorker';
-import { Router, browserHistory } from 'react-router';
+import { Router } from 'react-router';
 import routes from './routes';
 import './index.css';
 import reducers from './reducers';
@@ -15,7 +15,7 @@ const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENS
 
 ReactDOM.render(
     <Provider store={ store }>
-        <Router routes={routes} history={browserHistory} />
+        <Router routes={routes} />
     </Provider>, 
     document.getElementById('root'));
 registerServiceWorker();
