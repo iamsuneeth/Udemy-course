@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="vendors/css/normalize.css">
     <link rel="stylesheet" href="vendors/css/Grid.css">
     <link rel="stylesheet" href="vendors/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/css/animate.css">
     <link rel="stylesheet" href="resources/css/index.css">
+    <link rel="stylesheet" href="resources/css/queries.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
     <title>Omni Food</title>
 </head>
@@ -16,26 +18,28 @@
         <nav>
             <div class="row">
                 <img src="resources/images/logo-white.png" class="logo" alt="logo">
-                <ul class="main-nav">
-                    <li><a href="#">Food delivery</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Our cities </a></li>
-                    <li><a href="#">Sign up</a></li>
+                <img src="resources/images/logo.png" class="logo-black" alt="logo">
+                <ul class="main-nav js-nav">
+                    <li><a href="#features">Food delivery</a></li>
+                    <li><a href="#steps">How it works</a></li>
+                    <li><a href="#cities">Our cities </a></li>
+                    <li><a href="#plans">Sign up</a></li>
                 </ul>
+                <a class="mobile-menu-icon"><i class="fa fa-bars"></i></a>
             </div>
         </nav>
         <div class="header-text-box">
             <h1>Goodbye junk food.<br/> Hello super healthy meals.</h1>
-            <a href="#" class="btn btn-primary">I’m hungry</a>
-            <a href="#" class="btn btn-default">Show me more</a>
+            <a href="#" class="btn btn-primary js-scroll-to-plans">I’m hungry</a>
+            <a href="#" class="btn btn-default js-scroll-to-features">Show me more</a>
         </div>
     </header>
-    <section class="section-features">
+    <section id="features" class="section-features js-section-features">
         <div class="row">
             <h2>Get food fast — not fast food.</h2>
             <p class='long-copy'>Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!</p>
         </div> 
-        <div class="row">
+        <div class="row js-wp-1">
             <div class="col span-1-of-4 box">
                 <i class='fa fa-hourglass-o icon-big'></i>
                 <h3>Up to 365 days/year</h3>
@@ -58,7 +62,7 @@
             </div>
         </div>
     </section>
-    <section class="section-meals">
+    <section id="meals" class="section-meals">
         <ul class="meals-showcase clearfix">
             <li>
                 <figure><img src="resources/images/1.jpg" alt="Korean bibimbap with egg and vegetables"></figure>
@@ -88,12 +92,12 @@
             </li>
         </ul>
     </section>
-    <section class="section-steps">
+    <section id="steps" class="section-steps js-scroll-to-steps">
         <div class="row">
             <h2>How it Works &mdash; Simple as 1, 2, 3</h2>
         </div>
         <div class="row">
-            <div class="col span-1-of-2 steps-box"><img src="resources/images/app-iPhone.png" alt="omnifood app on iphone" class="app-screen"></div>
+            <div class="col span-1-of-2 steps-box js-wp-2"><img src="resources/images/app-iPhone.png" alt="omnifood app on iphone" class="app-screen"></div>
             <div class="col span-1-of-2 steps-box clearfix">
                 <div class="works-step">
                     <div>1</div>
@@ -107,12 +111,14 @@
                     <div>3</div>
                     <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                 </div>
-                <a href="#" class="btn-app"><img src="resources/images/download-app.svg" alt="app on apple store"></a>
-                <a href="#" class="btn-app"><img src="resources/images/download-app-android.png" alt="app on playstore"></a>
+                <div class="btn-container">
+                    <a href="#" class="btn-app"><img src="resources/images/download-app.svg" alt="app on apple store"></a>
+                    <a href="#" class="btn-app"><img src="resources/images/download-app-android.png" alt="app on playstore"></a>
+                </div>
             </div>
         </div>
     </section>
-    <section class="section-cities">
+    <section id="cities" class="section-cities js-scroll-to-cities">
         <div class="row">
             <h2>We're currently in these cities</h2>
         </div>
@@ -209,7 +215,7 @@
             </div>
         </div>
     </section>
-    <section class="section-plans">
+    <section id="plans" class="section-plans js-section-plans">
         <div class="row">
             <h2>Start eating healthy today</h2>
         </div>
@@ -363,5 +369,8 @@
             <p>Copyright &copy; 2017 Omnifood. All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="vendors/js/jquery-3.2.1.min.js"></script>
+    <script src="resources/js/index.js"></script>
+    <script src="resources/js/scrolling.js"></script>
 </body>
 </html>
